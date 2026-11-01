@@ -2184,7 +2184,7 @@ static spv::Function *make_vert_finalize_function(spv::Builder &b, const SpirvSh
         }
     }
 
-    if (translation_state.is_vulkan) {
+   if (translation_state.is_vulkan) {
         const spv::Id v4 = b.makeVectorType(b.makeFloatType(32), 4);
         const spv::Id zero = b.makeFloatConstant(0.0f);
         const spv::Id zero_v4 = b.makeCompositeConstant(v4, { zero, zero, zero, zero });
